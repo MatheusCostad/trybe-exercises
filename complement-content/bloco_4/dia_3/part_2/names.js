@@ -5,5 +5,5 @@ let names = {
 };
 
 for (const key in names) {
-  console.log(names[key]);
+  console.log('Olá, ' + names[key]);
 }

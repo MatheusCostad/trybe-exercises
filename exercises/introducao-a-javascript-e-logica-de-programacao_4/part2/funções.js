@@ -50,3 +50,14 @@ for (const key in numbers) {
 
 console.log(lowestNumberIndex([2, 4, 6, 7, 10, 0, -3]));
 
+function biggestName(names) {
+  let biggest = names[0];
+  for (const key in names) {
+    if (names[key].length > biggest.length) {
+      biggest = names[key];
+    }
+  }
+  return biggest;
+}
+
+console.log(biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));

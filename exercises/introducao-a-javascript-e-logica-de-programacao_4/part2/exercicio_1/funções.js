@@ -13,8 +13,6 @@ function higherNumber(numbers) {
   for (let compare of numbers) {
     if (compare > maior) {
       maior = compare
-    } else {
-      maior = maior
     }
   }
   return maior
@@ -30,3 +28,25 @@ for (const key in numbers) {
 }
 
 console.log(higherNumberIndex([2, 3, 6, 7, 10, 1]));
+
+function lowestNumber(numbers) {
+  let lowest = numbers[0];
+  for (let compare of numbers) {
+    if (compare < lowest) {
+      lowest = compare
+    }
+  }
+  return lowest
+}
+
+function lowestNumberIndex(numbers) {
+  let lowest = lowestNumber(numbers);
+for (const key in numbers) {
+  if (lowest === numbers[key]) {
+    return key
+  }
+}
+}
+
+console.log(lowestNumberIndex([2, 4, 6, 7, 10, 0, -3]));
+

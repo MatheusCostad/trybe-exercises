@@ -90,7 +90,22 @@ function summation(number) {
   for (let index = 1; index <= number; index++) {
     summation += index;
   }
-  return summation
+  return summation;
 }
 
 console.log(summation(5));
+
+function  checkFinal(stringWord, stringEnding) {
+  let reverseWord = stringWord.split('').reverse().join('');
+  let reverseEnding = stringEnding.split('').reverse().join('');
+  let endingCompare = '';
+  for (let index = 0; index < reverseEnding.length; index += 1) {
+    endingCompare += reverseWord[index];
+  }
+  if (reverseEnding === endingCompare) {
+    return true;
+  }
+  return false;
+}
+
+console.log(checkFinal('trybe', 'bet'));

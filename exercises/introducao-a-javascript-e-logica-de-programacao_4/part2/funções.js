@@ -108,4 +108,4 @@ function  checkFinal(stringWord, stringEnding) {
   return false;
 }
 
-console.log(checkFinal('trybe', 'bet'));
+console.log(checkFinal('trybe', 'be'));

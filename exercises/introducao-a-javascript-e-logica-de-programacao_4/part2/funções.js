@@ -61,3 +61,27 @@ function biggestName(names) {
 }
 
 console.log(biggestName(['José', 'Lucas', 'Nádia', 'Fernanda', 'Cairo', 'Joana']));
+
+
+function repeat(numbers) {
+  let repeat = 0;
+  let count2 = 0;
+  for (let key of numbers) {
+  let count = 0;  
+    for (let key2 of numbers) {
+      if (key === key2) {
+        count += 1
+      }
+    }
+  if (count2 < count) {
+    repeat = key;
+    count2 = count;
+    count = 0;
+  }
+  count = 0;
+  }
+return repeat
+}
+
+console.log(repeat([3, 3, 2, 5, 8, 3, 2]));
+

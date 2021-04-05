@@ -85,3 +85,12 @@ return repeat
 
 console.log(repeat([3, 3, 2, 5, 8, 3, 2]));
 
+function summation(number) {
+  let summation = 0;
+  for (let index = 1; index <= number; index++) {
+    summation += index;
+  }
+  return summation
+}
+
+console.log(summation(5));

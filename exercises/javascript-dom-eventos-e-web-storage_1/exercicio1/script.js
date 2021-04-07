@@ -22,7 +22,12 @@ let centerContent = document.getElementsByClassName('center-content')[0];
 
 centerContent.style.background = 'white';
 
-document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript'
+document.getElementsByTagName('h1')[0].innerText = 'Exercício 5.1 - JavaScript';
+
+for (const key in document.getElementsByTagName('p')) {
+  let elementP = document.getElementsByTagName('p')[key];  
+  elementP.style.fontWeight = 'bolder';
+}
 
 
 

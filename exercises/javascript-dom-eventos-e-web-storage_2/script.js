@@ -1,6 +1,3 @@
-// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
-// Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
-
 // Adicione a tag h1 com o texto Exercício 5.2 - JavaScript DOM como filho da tag body ;
 let body = document.querySelector('body');
 let bodyChild1 = document.createElement('h1');
@@ -41,3 +38,19 @@ let imgDiv3 = document.createElement('IMG');
 imgDiv3.className = 'small-image';
 imgDiv3.src = 'https://picsum.photos/200';
 div3.appendChild(imgDiv3);
+
+// Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
+
+let div4 = document.querySelector('div .right-content');
+let listChildDiv3 = document.createElement('ul');
+listChildDiv3.className = 'list1a10';
+div4.appendChild(listChildDiv3);
+
+let list = document.querySelector('.list1a10');
+for (let index = 1; index < 11; index++) {
+  let listItem = document.createElement('li');
+  listItem.innerText = index;
+  list.appendChild(listItem);
+}
+
+// Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.

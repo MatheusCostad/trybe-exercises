@@ -47,10 +47,15 @@ listChildDiv3.className = 'list1a10';
 div4.appendChild(listChildDiv3);
 
 let list = document.querySelector('.list1a10');
-for (let index = 1; index < 11; index++) {
+for (let index = 1; index < 11; index += 1) {
   let listItem = document.createElement('li');
   listItem.innerText = index;
   list.appendChild(listItem);
 }
 
 // Adicione 3 tags h3 , todas sendo filhas do div criado no passo 2.
+
+for (let index = 0; index < 3; index += 1) {
+  let h33 = document.createElement('h3');
+  div1.appendChild(h33);
+}

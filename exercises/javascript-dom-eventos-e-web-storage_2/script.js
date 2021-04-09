@@ -1,4 +1,3 @@
-// Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
 // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
 // Adicione uma imagem com src configurado para o valor https://picsum.photos/200 e classe small-image . Esse elemento deve ser filho do div criado no passo 5;
 // Adicione uma lista não ordenada com os valores de 1 a 10 por extenso como valores da lista. Essa lista deve ser filha do div criado no passo 6;
@@ -22,3 +21,11 @@ div1Child1.className = 'center-content';
 div1.appendChild(div1Child1);
 
 // Adicione a tag p como filho do div criado no passo 3 e coloque algum texto;
+let div2 = document.querySelector('div .center-content');
+let paraChildDiv2 = document.createElement('p');
+paraChildDiv2.innerText = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsam quisquam atque quas nesciunt, deleniti officia temporibus corrupti tenetur quis molestias tempora optio reprehenderit ab omnis quasi ullam vitae cumque blanditiis.';
+div2.appendChild(paraChildDiv2);
+
+// Adicione a tag div com a classe left-content como filho da tag div criada no passo 2;
+let div1Child2 = document.createElement('div');
+div1Child2.className = 'left-content';

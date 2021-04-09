@@ -37,7 +37,27 @@ primeiroFilhoDoFilho.appendChild(primeiroFilhoDoFilhoFilho);
 
 console.log(document.querySelector('#primeiroFilhoDoFilho div').parentElement.parentElement.nextElementSibling);
 
+let div = document.querySelector('#pai');
+let divAll = document.querySelector('#pai').children;
 
+for (let index = 0; index < divAll.length; index += 1) {
+  let element = divAll[index];
+  if (element.id !== 'elementoOndeVoceEsta' ) {
+    div.removeChild(element);
+  }
+}
+div.removeChild(divAll[1]);
 
+console.log(divAll);
 
+let div2 = document.querySelector('#elementoOndeVoceEsta');
+let divAll2 = document.querySelector('#elementoOndeVoceEsta').children;
 
+for (let index = 0; index < divAll2.length; index += 1) {
+  let element2 = divAll2[index];
+  if (element2.id !== 'primeiroFilhoDoFilho') {
+    div2.removeChild(element2);
+  }
+}
+
+console.log(divAll2);

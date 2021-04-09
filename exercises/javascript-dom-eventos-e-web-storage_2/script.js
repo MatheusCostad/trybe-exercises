@@ -31,3 +31,6 @@ div1Child2.className = 'left-content';
 div1.appendChild(div1Child2);
 
 // Adicione a tag div com a classe right-content como filho da tag div criada no passo 2;
+let div1Child3 = document.createElement('div');
+div1Child3.className = 'right-content';
+div1.appendChild(div1Child3);

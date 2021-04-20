@@ -44,9 +44,28 @@
     </fieldset>
 <!-- dados do seu último emprego -->
     <fieldset id = 'dadosEmprego'>
+      <h2>Dados do seu último emprego</h2>
+      <label for="resumo">
+        Resumo do currículo:
+        <br>
+        <textarea name="resumo" id="resumo" required cols="30" rows="10" maxlength="1000" ></textarea>
+      </label>
+      <br>
+      <label for="cargo">
+        Cargo: <input type="text" required maxlength="40" id="cargo">
+      </label>
+      <br>
+      <label for="descrição">
+        Descrição do cargo: <input type="text" required maxlength="500">
+      </label>
+      <br>
+      <label for="date">
+        Data de início: <input type="text" id="dateText"required maxlength="10">
+      </label>
     </fieldset>
+    <button class="submit-button" id= "submitButton" type="button">Enviar</button>
+    <button class="clear-button" id = "clearButton" type="button">Limpar</button>
   </form>
-
 </body>
   <script src="script.js"></script>
 </html>

@@ -22,3 +22,16 @@ figure img{
 .para {
   width: 100%;
 }
+
+@media only screen and (min-width: 768px) {
+  #figures {
+    flex-direction: row;
+  }
+  figure {
+    margin: auto;
+  }
+}
+
+@media only screen and (min-width: 992px) {
+  
+}

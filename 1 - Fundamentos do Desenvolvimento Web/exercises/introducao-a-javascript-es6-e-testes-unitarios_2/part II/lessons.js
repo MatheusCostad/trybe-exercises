@@ -64,8 +64,9 @@ const totalStudents = object => {
 
 console.log(totalStudents(allLessons));
 
-const getValueByNumber = (obj,number) => Object.values(obj)[number];
-console.log(getValueByNumber);
+const getValueByNumber = (object,key) => Object.values(object)[key];
+console.log(getValueByNumber(lesson1, 0));
+// Output: 'Matématica'
 
 const verifyPair = (obj, key, value) => {
   const arr = Object.entries(obj);

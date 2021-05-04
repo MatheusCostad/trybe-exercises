@@ -71,6 +71,7 @@ const expectedResult = [
 
 function oldBooks() {
   // escreva seu código aqui
+  return books.filter(book => book.releaseYear < 2021 - 60).map((book) => book.name);
 }
 
 assert.deepStrictEqual(oldBooks(), expectedResult);

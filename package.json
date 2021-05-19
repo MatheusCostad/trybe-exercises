@@ -4,7 +4,7 @@
   "description": "Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Matheus Costa](www.linkedin.com/in/dev-matheus-costa)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:",
   "main": "index.js",
   "scripts": {
-    "test": "jest"
+    "test": "jest --watchAll"
   },
   "repository": {
     "type": "git",

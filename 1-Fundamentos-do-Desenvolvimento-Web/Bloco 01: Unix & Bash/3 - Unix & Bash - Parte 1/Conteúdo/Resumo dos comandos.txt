@@ -1,0 +1,34 @@
+ls - lista os arquivos
+mkdir - cria um  diretório
+cd - vai para a pasta de destino
+pwd - lista todo o caminho até a pasta atual
+cp - cria uma cópia do arquivo 
+mv - move um arquivo(também é útil para renomear arquivos)
+rm - remove um arquivo
+rmdir - remove um diretório
+clear - limpa o terminal
+cat - imprime no terminal um arquivo ou texto
+less - lista um arquivo página por página
+head - lista as 10 primeiras linhas
+tail - lista as 10 últimas linhas
+grep - puxa uma determinada informação dentro de um arquivo
+wc - mostra informações como número de linhas, palavras e caracteres
+> - leva as informações de um comando para um arquivo apagando as informações do arquivo
+>> - leva as informações de um comando para um arquivo
+| - faz o comando depois do "|" usar o output do comando anterio
+sort - ordena em ordem alfabética
+who - mostra os usuários na máquina
+man - manual
+whatis - explicação simples do comando
+apropos - procura por uma determinada expreção na ocumentação do  linux
+* - substitui qualquer caracter em qalqer posição
+? - substitui um caracter naquela posição expecífica
+chomod - altera os direitos de acesso de um arquivo
+ps - lista os processos em execução
+bg - executa um processo no backgraund
+fg - executa um processo no frontgraund
+kill - mata um processo 
+find - acha um arquivo a partir de determinado diretório
+history - mostra o histórico de comandos do terminal
+alias - permite dar outro nome a um comando
+

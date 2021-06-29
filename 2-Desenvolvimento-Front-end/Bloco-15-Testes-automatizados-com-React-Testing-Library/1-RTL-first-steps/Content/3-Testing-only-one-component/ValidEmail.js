@@ -10,7 +10,7 @@ const ValidEmail = (props) => {
   if (email) return (
     <div>
       <h2 data-testid="id-email-user" >{`Valor: ${email}`}</h2>
-      {(verifyEmail(email) ? <h3 style={{color: "green"}}>Email Valido</h3> : <h3 style={{color: "red"}}>Email Inválido</h3>)}
+      <h3 data-testid="id-is-email-valid" className={verifyEmail(email) ? 'green-text' : 'red-text'}>{(verifyEmail(email) ? 'Email Valido' : 'Email Inválido')}</h3>
     </div>
   );
   return (

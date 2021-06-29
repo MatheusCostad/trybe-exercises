@@ -22,3 +22,11 @@ test('Testando um componente, caso o email ainda não tenha sido passado.', () =
   expect(queryByAltText('Email Inválido')).not.toBeInTheDocument()
   expect(queryByAltText('Email Validos')).not.toBeInTheDocument()
 });
+
+test('Testando se o componente possui texto vermelho ao ser digitado um email inválido.', () => {
+  const EMAIL_USER = 'emailerrado';
+
+  render(<ValidEmail email={EMAIL_USER} />);
+  const isValidText = screen.getByTestId('id-is-email-valid');
+  expect(isValidText).toHaveAttribute('class', 'red-text');
+});

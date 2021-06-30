@@ -5,3 +5,5 @@
 import MutationObserver from '@sheerun/mutationobserver-shim';
 window.MutationObserver = MutationObserver;
 ~~~
+
+Obs: Esta biblioteca serve para monitoramento de alterações no DOM da página.

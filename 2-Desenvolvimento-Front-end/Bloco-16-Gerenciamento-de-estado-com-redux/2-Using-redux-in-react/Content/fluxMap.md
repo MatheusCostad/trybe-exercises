@@ -12,9 +12,9 @@
 
 ## Checklist react-redux: Passo a passo para guardar no coração e colar na parede
 
-- npx create-react-app my-app-redux;
-- npm install --save redux react-redux;
-- npm install.
+- `npx create-react-app my-app-redux`;
+- `npm install --save redux react-redux`;
+- `npm install`.
 
 ### Criar dentro do diretório src
 
@@ -36,20 +36,20 @@
 
 ### Em src/index.js
 
-- definir o Provider, < Provider store={ store }> , para - fornecer os estados à todos os componentes encapsulados em < App /> .
+- definir o Provider, `<Provider store={ store }>`, para - fornecer os estados à todos os componentes encapsulados em `<App />`.
 
 ### **Se a sua aplicação não terá outras páginas, não é necessário configurar as rotas. Caso contrário:**
 
-- npm install react-router-dom;
+- `npm install react-router-dom`;
 
 ### Em src/index.js
 
-- definir o BrowserRouter, < BrowserRouter> .
+- definir o BrowserRouter, `<BrowserRouter>`.
 
 ### No arquivo App.js
 
-- definir o Switch, < Switch> ;
-- definir a Route, < Route> .
+- definir o Switch,` <Switch>`;
+- definir a Route,` <Route>`.
 
 ### **O BrowserRouter, o Switch e a Route são três componentes essenciais para trabalhar rotas em React.**
 

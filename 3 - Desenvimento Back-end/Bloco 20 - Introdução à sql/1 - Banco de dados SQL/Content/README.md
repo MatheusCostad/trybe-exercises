@@ -17,9 +17,51 @@ Linguagem criada para manipular dados dentro de um banco de dados relacional.
 ### Constraints:
 
  - **NOT NULL** - Garante que aquele campo **não pode conter valores nulos**;
+
  - **UNIQUE** - Garante que o valor inserido na coluna da tabela é **único**;
+
  - **PRIMARY KEY** - A *chave primária* de uma tabela garante que a coluna em que essa *constraint* está sendo aplicada é **o identificador único da tabela** .
+
+   ```sql
+   CREATE TABLE tb02_compras (
+    tb02_cod_compra INT , 
+    tb02_data_compra DATE, 
+    tb02_hora_compra TIME);
+   
+   ALTER TABLE tb02_compras
+   ADD PRIMARY KEY(tb02_cod_compra);
+   ```
+
+   #### PRIMARY KEY composta.
+
+   Usamos chaves primárias compostas quando precisamos de dois campos para compor uma chave primária. No exemplo a seguir criamos uma tabela cuja a chave primária é constituída de 3 de campos.
+
+   ```sql
+   CREATE TABLE tb02_cupomfiscal (
+     tb02_cod_cupom INT,
+     tb02_cod_compra INT,
+     tb02_cod_operador INT,
+     tb02_dia_emissao DATE,
+     tb02_hora_emissao TIME,
+   PRIMARY KEY(tb02_cod_cupom, tb02_cod_compra, tb02_cod_operador));
+   ```
+
  - **FOREIGN KEY** - A *chave estrangeira* de uma tabela faz referência a uma chave primária (valor em uma coluna com a *constraint PRIMARY KEY* ) **de outra tabela** , permitindo um relacionamento entre as duas.
+
+   ```sql
+   CREATE TABLE tb03_itens_compra (
+    tb03_cod_itens INT ,
+    tb03_cod_produto INT ,
+    tb03_preco_item DECIMAL(9.2) ,
+    tb03_qtd_item INT,
+    PRIMARY KEY (tb03_cod_itens)) ;
+   
+   ALTER TABLE tb03_itens_compra ADD INDEX(tb03_cod_produto);
+   
+   ALTER TABLE tb03_itens_compra
+    ADD FOREIGN KEY (tb03_cod_produto) REFERENCES tb01_produtos(tb01_cod_produto);
+   ```
+
  - **DEFAULT** - Garante que, caso nenhum valor seja inserido na coluna (ou caso a pessoa usuária insira um valor nulo), a *constraint* **colocará o valor padrão que for passado para ela** .
 
 

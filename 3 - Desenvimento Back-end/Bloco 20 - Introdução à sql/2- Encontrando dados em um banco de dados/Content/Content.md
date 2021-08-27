@@ -85,7 +85,7 @@ SELECT COUNT(DISTINCT collun_name) FROM db.table;
 
 #### COUNT WHERE
 
-Combinado ao WHE	RE ele conta epenas os dados que passam na verificação.
+Combinado ao WHERE ele conta epenas os dados que passam na verificação.
 
 ```sql
 SELECT COUNT(collun_name) FROM db.table

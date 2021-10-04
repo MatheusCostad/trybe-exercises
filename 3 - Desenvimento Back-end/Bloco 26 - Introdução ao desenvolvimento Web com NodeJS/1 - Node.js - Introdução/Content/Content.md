@@ -144,7 +144,33 @@ O NPM é  o repositório de pacotes do NodeJS. É através dele que conseguimos 
 
 Ferramenta oficial que auxilia o gerenciamento dos pacotes. É através dele que criamos projetos, removemos e instalamos pacotes, publicamos e gerenciamos versões dos nossos próprios pacotes.
 
+### `package.json`
+
+Arquivo com as configurações importantes do pacote.
+
 ### Comandos
 
 Cheat Shell de comandos para consulta rápida [aqui](./CheatSheets/NPM.md).
+
+- `npm init`
+
+  Cria um novo pacote na página onde é executado. Ao ser executado pede informações como o nome do pacote, versão, autor e afins. Finalizando essas perguntas ele cria um `package.json` com as informações passadas.
+
+  PS: Para iniciar a aplicação com valores padrões basta passar a flag `-y`.
+
+- `npm run`
+
+  Executa um comando pré configurado na chave `scripts` do `package.json`.
+
+- `npm start`
+
+  Comando necessário para executar a aplicação principal daquele pacote. Sua função é executar o a chave `start` contida dentro da chave `scripts` no `package.json`.
+
+- `npm install`
+
+  Sem nenhum parâmetro instala todos os pacotes listados nas chaves `dependecendies` e `devDependencies` do `package.json`.
+
+  Quando recebe o nome de um pacote instala o pacote em questão e o adiciona na chave `dependecendies`. Caso seja passado a flag `-D` o pacote é adicionado na chave  `devDependencies`.
+
+  PS: O `install` pode ser abreviado para `i`.
 

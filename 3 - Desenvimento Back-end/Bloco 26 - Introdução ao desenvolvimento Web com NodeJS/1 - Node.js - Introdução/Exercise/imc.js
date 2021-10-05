@@ -1,8 +1,8 @@
 const readline = require("readline-sync");
 
 function returnIMC() {
-  const weight = readline.questionFloat("Qual o seu peso em kg ?");
-  const height = readline.questionFloat("Qual o sua altura em cm ?");
+  const weight = readline.questionFloat('Qual o seu peso em kg ?\n');
+  const height = readline.questionFloat('Qual o sua altura em cm ?\n');
   const imc = Math.round(weight/((height/100)**2) * 100)/100;
   const situation = (imcNumber) => {
     if (imcNumber < 18.5) return "abaixo do peso";
@@ -16,5 +16,3 @@ function returnIMC() {
 };
 
 returnIMC();
-
-module.exports = returnIMC;

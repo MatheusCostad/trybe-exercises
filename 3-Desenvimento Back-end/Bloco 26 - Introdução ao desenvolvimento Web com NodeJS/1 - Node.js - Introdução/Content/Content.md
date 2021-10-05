@@ -146,7 +146,186 @@ Ferramenta oficial que auxilia o gerenciamento dos pacotes. É através dele que
 
 ### `package.json`
 
-Arquivo com as configurações importantes do pacote.
+Arquivo com as configurações importantes do pacote. Nele encontramos um objeto, onde cada chave representa alguma configuração ou função. Exemplo de package.json:
+
+```json
+{
+    "name": "test-project",
+    "version": "1.0.0",
+    "description": "A Node.js project",
+    "main": "src/index.js",
+    "private": true,
+    "scripts": {
+        "dev": "nodemon ./src/index",
+        "start": "node ./src/index",
+        "test": "jest",
+        "compile": "tsc"
+    },
+    "dependencies": {
+        "axios": "^0.21.1",
+        "cors": "^2.8.5",
+        "dotenv": "^8.2.0",
+        "express": "^4.17.1",
+        "joi": "^17.3.0",
+        "pg": "^8.5.1",
+        "sequelize": "^6.4.0",
+        "uuid": "^8.3.2",
+        "winston": "^3.3.3"
+    },
+    "devDependencies": {
+        "jest": "^26.6.3",
+        "nock": "^13.0.5",
+        "nodemon": "^2.0.6",
+        "sequelize-mock-v5": "^1.2.0"
+    },
+    "engines": {
+        "node": ">= 6.0.0",
+        "npm": ">= 3.0.0"
+    }
+}
+```
+
+- `name`
+
+  Define o nome do pacote ou aplicação.
+
+  ```json
+  {
+  	"name": "example-name"
+  }
+  ```
+
+  O nome deve ser menor que 214 caracteres, não pode ter espaços e somente pode conter letras minúsculas, hífens (-) ou underscore.
+
+- `version`
+
+   Define a versão.
+
+  ```json
+  {
+  	"version": "1.0.0"
+  }
+  ```
+
+- `autor`
+
+  Define o nome do autor do pacote.
+
+  ```json
+   { "author": "dcmatheus" }
+  ```
+
+  Também pode ter esse formato:
+
+  ```json
+  {
+      "author": {
+          "name": "dcmatheus",
+          "email": "contato@dcmatheus.com.br",
+          "url": "https://www.dcmatheus.com"
+      }
+  }
+  ```
+
+- `contributors`
+
+  Assim como o autor, o projeto pode ter um ou mais contribuidores. Esta propriedade é uma array que os lista:
+
+  ```json
+  {
+      "contributors": [
+          "dcmatheus1",
+          {
+              "name": "dcmatheus2",
+          	"email": "contato@dcmatheus2.com.br",
+          	"url": "https://www.dcmatheus2.com"
+          }
+      ]
+  }
+  ```
+
+- `description`
+
+  Breve descrição.
+
+  ```json
+  {
+  	"description": "A Node.js project"
+  }
+  ```
+
+- `main`
+
+  Define o ponto de entrada da aplicação (o que vai ser retornado se alguém der um require no nosso pacote);
+
+  ```json
+  {
+  	"main": "index.js"
+  }
+  ```
+
+- `private`
+
+  Com o parâmetro `true` garante a que a aplicação não será publicada no NPM;
+
+  ```json
+  {
+  	"private": "true"
+  }
+  ```
+
+- `scripts`
+
+  Define scripts que podem ser executados;
+
+  ```json
+  {
+  	"scripts": {
+          "dev": "nodemon ./index",
+          "start": "node ./index",
+          "test": "jest"
+      }
+  }
+  ```
+
+- `dependencies`
+
+  Define uma lista de pacotes npm instalados como dependências de produção;
+
+  ```json
+  {  
+  	"dependencies": {
+  		"readline-sync": "^1.4.10"
+  	}
+  }
+  ```
+
+- `devDependencies` 
+
+  Define uma lista de pacotes npm instalados como dependências de desenvolvimento;
+
+  ```json
+  {
+  	"devDependencies": {
+         "jest": "^26.6.3" 
+      }
+  }
+  ```
+
+- `engines`
+
+  Define quais versões de Node este pacote/aplicação funciona;
+
+  ```json
+  {
+  	"engines": {
+          "node": ">= 6.0.0",
+          "npm": ">= 3.0.0"
+      }
+  }
+  ```
+
+Mais chaves no [site do Luiz Duarte](https://www.luiztools.com.br/post/o-guia-completo-do-package-json-do-node-js/).
 
 ### Comandos
 
@@ -173,3 +352,9 @@ Cheat Shell de comandos para consulta rápida [aqui](./CheatSheets/NPM.md).
   Quando recebe o nome de um pacote instala o pacote em questão e o adiciona na chave `dependecendies`. Caso seja passado a flag `-D` o pacote é adicionado na chave  `devDependencies`.
 
   PS: O `install` pode ser abreviado para `i`.
+
+**Referências:**
+
+1. [Trybe Bloco 25.1](https://app.betrybe.com/course/back-end/introducao-ao-desenvolvimento-web-com-nodejs/nodejs-introducao/c9afd697-cab8-4029-b0da-b7478557c55f/o-que-vamos-aprender/6615042e-b1d5-4a8d-8411-f00cc0fb9785?use_case=side_bar)
+2. [luiztools.com.br](https://www.luiztools.com.br/post/o-guia-completo-do-package-json-do-node-js/)
+

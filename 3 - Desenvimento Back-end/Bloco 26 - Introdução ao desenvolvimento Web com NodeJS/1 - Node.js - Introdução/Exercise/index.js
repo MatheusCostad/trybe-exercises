@@ -12,7 +12,7 @@ function questionScript() {
   applications.forEach(({ name }, index) => {
     console.log(`${index + 1} - ${name}`);
   })
-  const answer = readline.questionInt(`Responda com o número referente a aplicação.`);
+  const answer = readline.questionInt(`Responda com o número referente a aplicação.\n`);
   require(applications[answer - 1].file);
 };
 questionScript();

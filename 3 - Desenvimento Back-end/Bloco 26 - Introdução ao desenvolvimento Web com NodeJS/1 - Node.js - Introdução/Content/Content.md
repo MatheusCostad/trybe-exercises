@@ -173,4 +173,3 @@ Cheat Shell de comandos para consulta rápida [aqui](./CheatSheets/NPM.md).
   Quando recebe o nome de um pacote instala o pacote em questão e o adiciona na chave `dependecendies`. Caso seja passado a flag `-D` o pacote é adicionado na chave  `devDependencies`.
 
   PS: O `install` pode ser abreviado para `i`.
-

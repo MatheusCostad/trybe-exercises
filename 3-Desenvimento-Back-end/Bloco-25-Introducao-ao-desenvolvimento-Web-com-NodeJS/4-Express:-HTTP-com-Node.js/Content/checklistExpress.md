@@ -42,6 +42,8 @@
   const app = express(); // 1
   const cors = require('cors');
   
+  app.use(cors());
+  
   app.get('/caminho', functionRequeste); // 2
   
   app.listen(3001, () => {

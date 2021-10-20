@@ -30,7 +30,7 @@
   // "scripts": {
   //    "test": "echo \"Error: no test specified\" && exit 1",
   		"start": "node index.js",
-  		"dev": "nodemon index.js"
+  	"dev": "nodemon index.js"
   //  },
   // ...
   ```
@@ -41,6 +41,8 @@
   const express = require('express');
   const app = express(); // 1
   const cors = require('cors');
+  
+  app.use(cors());
   
   app.get('/caminho', functionRequeste); // 2
   

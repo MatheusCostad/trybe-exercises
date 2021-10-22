@@ -43,6 +43,7 @@
   const cors = require('cors');
   
   app.use(cors());
+  app.use(express.json());// informa ao Express que o formato utilizado será o JSON
   
   app.get('/caminho', functionRequeste); // 2
   
@@ -66,22 +67,4 @@ Esse pequeno script é o suficiente para:
 
   ```shell
   npm run dev
-  ```
-
-- Caso seja precise receber dados do Body será necessário instalar o body-parser:
-
-  ```shell
-  npm i body-parser
-  ```
-
-- Agora no arquivo `index.js` , faça a modificação abaixo:
-
-  ```js
-  // const express = require('express');
-  const bodyParser = require('body-parser');
-  
-  // const app = express();
-  app.use(bodyParser.json());
-  
-  // ...
   ```

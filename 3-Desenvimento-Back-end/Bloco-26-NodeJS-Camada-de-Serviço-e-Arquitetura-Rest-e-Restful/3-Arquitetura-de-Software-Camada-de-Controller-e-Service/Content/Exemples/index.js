@@ -9,6 +9,7 @@ const cors = require('cors');
 
 app.use(bodyParser.json());
 app.use(cors());
+app.use(errorMiddleware);
 
 app.get('/authors', Author.getAll);
 app.get('/authors/:id', Author.findById);
@@ -19,7 +20,6 @@ app.get('/books/search', Book.getByAuthorId);
 app.get('/books/:id', Book.findById);
 app.post('/books', Book.create);
 
-app.use(errorMiddleware);
 
 const PORT = process.env.PORT || 3000;
 

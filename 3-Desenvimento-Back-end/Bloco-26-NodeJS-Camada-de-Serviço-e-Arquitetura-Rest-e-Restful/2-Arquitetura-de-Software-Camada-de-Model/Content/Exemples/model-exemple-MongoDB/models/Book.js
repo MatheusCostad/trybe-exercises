@@ -1,5 +1,5 @@
-const connection = require('./connection');
 const { ObjectId } = require('mongodb');
+const connection = require('./connection');
 
 const getAll = () => {
   return connection()
@@ -44,9 +44,9 @@ const create = async (title, authorId) => {
   return {
     id: inserted.insertedId,
     title,
-    authorId
-  }
-}
+    authorId,
+  };
+};
 
 module.exports = {
   getAll,

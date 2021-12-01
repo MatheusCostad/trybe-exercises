@@ -8,7 +8,10 @@ const User = (sequelize, DataTypes) => {
   //   freezeTableName: true,
   //   tableName: 'NomeDaTabela',
   // }
-  );
+  {
+    underscored: true,
+    tableName: 'Users',
+  });
 
   return User;
 };

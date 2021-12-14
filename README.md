@@ -1,6 +1,6 @@
 # Trybe
 
-Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Matheus Costa](www.linkedin.com/in/dev-matheus-costa)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
+Este repositório contém todas as atividades de aprendizagem desenvolvidas por _[Matheus Costa](www.linkedin.com/in/dcmatheus)_ enquanto estudava na [Trybe](https://www.betrybe.com/) :rocket:
 
 _"A Trybe é uma escola do futuro para qualquer pessoa que queira melhorar de vida e construir uma carreira de sucesso em tecnologia, onde a pessoa só paga quando conseguir um bom trabalho."_
 
@@ -199,39 +199,39 @@ O programa conta com mais de 1.500 horas de aulas presenciais e online, aborda i
 
 ##### Bloco 28: NodeJS
 
-- [ ] 28-1: _Arquitetura de Software - Camada de Serviço_
-- [ ] 28-2: _Arquitetura web - Rest e Restful_
-- [ ] 28-3: _[Projeto - Store Manager]()_
+- [X] 28-1: _Arquitetura de Software - Camada de Serviço_
+- [X] 28-2: _Arquitetura web - Rest e Restful_
+- [X] 28-3: _[Projeto - Store Manager]()_
 
 ##### Bloco 29: NodeJS
 
-- [ ] 29-1: _NodeJS - JWT - (JSON Web Token)_
-- [ ] 29-2: _NodeJS - Upload de arquivos com Multer_
-- [ ] 29-3: _[Projeto - Cookmaster V2]()_
+- [X] 29-1: _NodeJS - JWT - (JSON Web Token)_
+- [X] 29-2: _NodeJS - Upload de arquivos com Multer_
+- [X] 29-3: _[Projeto - Cookmaster V2]()_
 
 ##### Bloco 30: Introdução - Deploy
 
-- [ ] 30-1: _Infraestrutura - Deploy com Heroku_
-- [ ] 30-2: _Deploy - Gerenciadores de Processos_
-- [ ] 30-3: _[Projeto - Stranger Things]()_
+- [X] 30-1: _Infraestrutura - Deploy com Heroku_
+- [X] 30-2: _Deploy - Gerenciadores de Processos_
+- [X] 30-3: _[Projeto - Stranger Things]()_
 
 ##### Bloco 31: Projeto
 
-- [ ] 31-1: _[Projeto - Trybeer]()_
+- [X] 31-1: _[Projeto - Trybeer]()_
 
 ##### Bloco 32: Arquitetura de Software
 
-- [ ] 32-1: _Arquitetura - Princípios SOLID_
-- [ ] 32-2: _ORM - Interface da aplicação com o banco de dados_
-- [ ] 32-3: _Arquitetura de Software - DDD_
-- [ ] 32-4: _Boas práticas na escrita de testes_
-- [ ] 32-3: _[Projeto - API de Blogs]()_
+- [X] 32-1: _Arquitetura - Princípios SOLID_
+- [X] 32-2: _ORM - Interface da aplicação com o banco de dados_
+- [X] 32-3: _Arquitetura de Software - DDD_
+- [X] 32-4: _Boas práticas na escrita de testes_
+- [X] 32-3: _[Projeto - API de Blogs]()_
 
 ##### Bloco 33: Sockets
 
-- [ ] 30-1: _Sockets - TCP/UDP & NET_
-- [ ] 30-2: _Sockets - Socket.io_
-- [ ] 30-3: _[Projeto - Webchat]()_
+- [X] 30-1: _Sockets - TCP/UDP & NET_
+- [X] 30-2: _Sockets - Socket.io_
+- [X] 30-3: _[Projeto - Webchat]()_
 
 ##### Bloco 34: Projeto
 

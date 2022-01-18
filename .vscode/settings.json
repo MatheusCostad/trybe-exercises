@@ -1,13 +1,3 @@
 {
-    "cSpell.words": [
-        "INSS",
-        "Sextou",
-        "divisao",
-        "impares",
-        "porcentagem",
-        "salario",
-        "salarioli",
-        "stomatopoda",
-        "stromatopoda"
-    ]
+  "python.formatting.provider": "black"
 }

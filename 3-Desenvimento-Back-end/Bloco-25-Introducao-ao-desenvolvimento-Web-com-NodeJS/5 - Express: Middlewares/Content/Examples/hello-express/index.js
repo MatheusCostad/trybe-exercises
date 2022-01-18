@@ -30,21 +30,26 @@ app.get('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipe = recipes.find((r) => r.id === parseInt(id));
 
-  if (!recipe) return res.status(404).json({ message: 'Recipe not found!'});
+  if (!recipe) return res.status(404).json({ message: 'Recipe not found!' });
 
   res.status(200).json(recipe);
 });
 
 app.get('/recipes/search', function (req, res) {
   const { name, maxPrice, minPrice } = req.query;
-  const filteredRecipes = recipes.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice) && r.price >= parseInt(minPrice));
+  const filteredRecipes = recipes.filter(
+    (r) =>
+      r.name.includes(name) &&
+      r.price < parseInt(maxPrice) &&
+      r.price >= parseInt(minPrice)
+  );
   res.status(200).json(filteredRecipes);
 });
 
 app.post('/recipes', function (req, res) {
   const { id, name, price, waitTime } = req.body;
-  recipes.push({ id, name, price, waitTime});
-  res.status(201).json({ message: 'Recipe created successfully!'});
+  recipes.push({ id, name, price, waitTime });
+  res.status(201).json({ message: 'Recipe created successfully!' });
 });
 
 app.put('/recipes/:id', function (req, res) {
@@ -52,7 +57,8 @@ app.put('/recipes/:id', function (req, res) {
   const { name, price } = req.body;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
 
-  if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+  if (recipeIndex === -1)
+    return res.status(404).json({ message: 'Recipe not found!' });
 
   recipes[recipeIndex] = { ...recipes[recipeIndex], name, price };
 
@@ -63,7 +69,8 @@ app.delete('/recipes/:id', function (req, res) {
   const { id } = req.params;
   const recipeIndex = recipes.findIndex((r) => r.id === parseInt(id));
 
-  if (recipeIndex === -1) return res.status(404).json({ message: 'Recipe not found!' });
+  if (recipeIndex === -1)
+    return res.status(404).json({ message: 'Recipe not found!' });
 
   recipes.splice(recipeIndex, 1);
 
@@ -78,21 +85,26 @@ app.get('/drinks/:id', function (req, res) {
   const { id } = req.params;
   const drink = drinks.find((r) => r.id === parseInt(id));
 
-  if (!drink) return res.status(404).json({ message: 'Drink not found!'});
+  if (!drink) return res.status(404).json({ message: 'Drink not found!' });
 
   res.status(200).json(drink);
 });
 
 app.get('/drinks/search', function (req, res) {
   const { name, maxPrice, minPrice } = req.query;
-  const filteredDrinks = drinks.filter((r) => r.name.includes(name) && r.price < parseInt(maxPrice) && r.price >= parseInt(minPrice));
+  const filteredDrinks = drinks.filter(
+    (r) =>
+      r.name.includes(name) &&
+      r.price < parseInt(maxPrice) &&
+      r.price >= parseInt(minPrice)
+  );
   res.status(200).json(filteredDrinks);
 });
 
 app.post('/drinks', function (req, res) {
   const { id, name, price, waitTime } = req.body;
-  drinks.push({ id, name, price, waitTime});
-  res.status(201).json({ message: 'Drink created successfully!'});
+  drinks.push({ id, name, price, waitTime });
+  res.status(201).json({ message: 'Drink created successfully!' });
 });
 
 app.put('/drinks/:id', function (req, res) {
@@ -100,7 +112,8 @@ app.put('/drinks/:id', function (req, res) {
   const { name, price } = req.body;
   const drinkIndex = drinks.findIndex((r) => r.id === parseInt(id));
 
-  if (drinkIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+  if (drinkIndex === -1)
+    return res.status(404).json({ message: 'Drink not found!' });
 
   drinks[drinkIndex] = { ...drinks[drinkIndex], name, price };
 
@@ -111,7 +124,8 @@ app.delete('/drinks/:id', function (req, res) {
   const { id } = req.params;
   const drinkIndex = drinks.findIndex((r) => r.id === parseInt(id));
 
-  if (drinkIndex === -1) return res.status(404).json({ message: 'Drink not found!' });
+  if (drinkIndex === -1)
+    return res.status(404).json({ message: 'Drink not found!' });
 
   drinks.splice(drinkIndex, 1);
 
@@ -119,7 +133,7 @@ app.delete('/drinks/:id', function (req, res) {
 });
 
 app.all('*', function (req, res) {
-  return res.status(404).json({ message: `Rota '${req.path}' não existe!`});
+  return res.status(404).json({ message: `Rota '${req.path}' não existe!` });
 });
 
 app.listen(3001, () => {

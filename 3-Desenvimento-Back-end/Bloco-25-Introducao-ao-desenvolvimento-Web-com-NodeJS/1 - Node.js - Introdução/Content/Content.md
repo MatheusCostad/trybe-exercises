@@ -329,7 +329,7 @@ Mais chaves no [site do Luiz Duarte](https://www.luiztools.com.br/post/o-guia-co
 
 ### Comandos
 
-Cheat Shell de comandos para consulta rápida [aqui](./CheatSheets/NPM.md).
+Cheat Sheets de comandos para consulta rápida [aqui](./CheatSheets/NPM.md).
 
 - `npm init`
 

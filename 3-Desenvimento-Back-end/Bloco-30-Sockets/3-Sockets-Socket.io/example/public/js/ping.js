@@ -1,5 +1,7 @@
 const socket = window.io();
 
+console.log(socket);
+
 const button = document.querySelector('#pingButton');
 button.addEventListener('click', (e) => {
   socket.emit('ping');

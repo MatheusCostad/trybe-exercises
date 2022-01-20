@@ -14,6 +14,6 @@ require('./sockets/ping')(io);
 require('./sockets/chat')(io);
 require('./sockets/rooms')(io);
 
-http.listen(3000, () => {
-  console.log('Servidor ouvindo na porta 3000');
+http.listen(3003, () => {
+  console.log('Servidor ouvindo na porta 3003');
 });

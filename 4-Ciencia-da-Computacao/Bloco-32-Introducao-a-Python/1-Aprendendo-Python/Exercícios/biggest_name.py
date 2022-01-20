@@ -9,4 +9,4 @@ def biggest_name(names):
 
 
 print("Exercício 4")
-print(biggest_name(["test", "teste", "megateste"]))
+print(biggest_name(["José", "Lucas", "Nádia", "Fernanda", "Cairo", "Joana"]))

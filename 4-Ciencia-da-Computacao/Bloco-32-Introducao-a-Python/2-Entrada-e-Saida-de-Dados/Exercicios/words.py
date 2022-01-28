@@ -9,9 +9,16 @@ with open("words.txt") as file:
 
 randomWord = random.choice(words)
 
-answer = input(f"Decifre a seguinte palavra: {randomWord[1]}\n")
 
-if answer == randomWord[0]:
-    print("Parabéns!!! Você acertou.")
-else:
-    print(f"Errooou!!! A palavra correta era: {randomWord[0]}")
+n = 0
+
+while n != 3:
+    answer = input(f"Decifre a seguinte palavra: {randomWord[1]}\n")
+    if answer == randomWord[0]:
+        print("Parabéns!!! Você acertou.")
+        n = 3
+    else:
+        print("Errooou!!!")
+        n += 1
+
+print(f"A palavra correta era: {randomWord[0]}")

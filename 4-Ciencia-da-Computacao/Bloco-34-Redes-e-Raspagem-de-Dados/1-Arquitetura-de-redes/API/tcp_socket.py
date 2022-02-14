@@ -15,7 +15,7 @@ class EchoHandler(StreamRequestHandler):
             # esta linha responde o cliente
             self.wfile.write(line)
             # esta linha imprime no console
-            print(line.decode('ascii').strip())
+            print(line.decode("ascii").strip())
 
 
 if __name__ == "__main__":

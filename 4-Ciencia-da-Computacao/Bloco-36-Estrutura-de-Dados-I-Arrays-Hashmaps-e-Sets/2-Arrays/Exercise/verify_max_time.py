@@ -9,3 +9,5 @@ def verify_max_time_ok(collected_values):
         if current_time >= max_time:
             max_time = current_time
     return max_time
+
+print(verify_max_time_ok([1, 1, 1, 1, 0, 0, 1, 1]))

@@ -2,6 +2,8 @@
 e operações que atuam sobre estes valores,
 de acordo com o que foi definido pelo TAD."""
 
+import sys
+
 
 class Array:
     def __init__(self):
@@ -25,6 +27,12 @@ class Array:
 
 # vamos inicializar e preencher uma estrutura de dados array
 array = Array()
+
+# sys.getsizeof retorna o tamanho da lista em bytes
+array_memory_size = sys.getsizeof(array.data)
+print("Memory Size", array_memory_size)  # 56
+print("-----")
+
 array.set(0, "Felipe")
 array.set(1, "Ana")
 array.set(2, "Shirley")
@@ -42,3 +50,12 @@ while index < len(array):
     # recupera o elemento através de um índice
     print("Index:", index, ", Nome:", array.get(index))
     index += 1
+print("-----")
+
+array.set(4, "Alberto")
+array.set(5, "Marta")
+array.set(6, "Túlio")
+array.set(7, "Michelle")
+
+array_memory_size = sys.getsizeof(array.data)
+print("Memory Size", array_memory_size)  # 120

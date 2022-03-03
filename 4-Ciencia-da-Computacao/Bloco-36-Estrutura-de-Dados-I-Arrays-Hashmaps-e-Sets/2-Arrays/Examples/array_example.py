@@ -24,9 +24,21 @@ class Array:
     def set(self, index, value):
         self.data.insert(index, value)
 
+    def remove(self, index):
+        # removeremos o item, retornando-o
+        return self.data.pop(index)
+
 
 # vamos inicializar e preencher uma estrutura de dados array
 array = Array()
+
+array.set(0, "Marcos")
+array.set(1, "Patrícia")
+print(array)  # saída: ['Marcos', 'Patrícia']
+
+array.remove(0)  # retorna a string "Marcos"
+print(array)  # saída: ['Patrícia']
+array.remove(0)
 
 # sys.getsizeof retorna o tamanho da lista em bytes
 array_memory_size = sys.getsizeof(array.data)

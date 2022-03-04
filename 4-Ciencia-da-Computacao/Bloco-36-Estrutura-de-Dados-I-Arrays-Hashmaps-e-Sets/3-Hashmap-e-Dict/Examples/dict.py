@@ -13,3 +13,7 @@ print(employee_registry)
 # objeto[chave] = novo_valor
 employee_registry[10] = "name30"
 print(f"Novo valor do id 10, após a atualização: {employee_registry[10]}")
+
+double = {i: i * 2 for i in range(3, 21)}
+
+print(double)

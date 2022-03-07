@@ -19,12 +19,17 @@ class Conjunto:
         string += "}"
         return string
 
+    def __contains__(self, item):
+        return self.set[item]
+
 
 if __name__ == "__main__":
     conj = Conjunto()
-    for i in [0, 10, 100, 1000]:
+    for i in [1, 2, 3]:
         conj.add(i)
     print(conj)
+    print(1 in conj)
+    print(0 in conj)
 
     conj2 = Conjunto()
     for i in [1, 2, 3]:

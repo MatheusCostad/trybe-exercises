@@ -49,6 +49,13 @@ class Conjunto:
 
         return new_conjunto
 
+    def issubset(self, conjuntoB):
+        for index in range(1001):
+            if self.set[index] and not conjuntoB.set[index]:
+                return False
+
+        return True
+
 
 if __name__ == "__main__":
     conj = Conjunto()

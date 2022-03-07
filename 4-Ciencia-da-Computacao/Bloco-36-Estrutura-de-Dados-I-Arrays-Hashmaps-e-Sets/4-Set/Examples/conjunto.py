@@ -40,6 +40,15 @@ class Conjunto:
 
         return new_conjunto
 
+    def difference(self, conjuntoB):
+        new_conjunto = Conjunto()
+
+        for index in range(1001):
+            if self.set[index] and not conjuntoB.set[index]:
+                new_conjunto.add(index)
+
+        return new_conjunto
+
 
 if __name__ == "__main__":
     conj = Conjunto()

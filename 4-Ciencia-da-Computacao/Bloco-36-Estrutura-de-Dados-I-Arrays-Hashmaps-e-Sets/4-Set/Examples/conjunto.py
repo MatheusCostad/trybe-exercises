@@ -56,6 +56,13 @@ class Conjunto:
 
         return True
 
+    def issuperset(self, conjuntoB):
+        for index in range(1001):
+            if conjuntoB.set[index] and not self.set[index]:
+                return False
+
+        return True
+
 
 if __name__ == "__main__":
     conj = Conjunto()
@@ -99,3 +106,17 @@ if __name__ == "__main__":
 
     conj3 = conj1.intersection(conj2)
     print(conj3)
+    conj1 = Conjunto()
+    for i in [1, 2, 3]:
+        conj1.add(i)
+
+    conj2 = Conjunto()
+    for i in [7, 2, 10]:
+        conj2.add(i)
+
+    conj3 = Conjunto()
+    conj4 = conj1.union(conj2)
+
+    print(conj1.issubset(conj4))
+    print(conj4.issuperset(conj1))
+    print(conj3.issubset(conj4))

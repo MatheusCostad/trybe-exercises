@@ -22,6 +22,15 @@ class Conjunto:
     def __contains__(self, item):
         return self.set[item]
 
+    def union(self, conjuntoB):
+        new_conjunto = Conjunto()
+
+        for index in range(1001):
+            if self.set[index] or conjuntoB.set[index]:
+                new_conjunto.add(index)
+
+        return new_conjunto
+
 
 if __name__ == "__main__":
     conj = Conjunto()
